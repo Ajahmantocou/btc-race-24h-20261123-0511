@@ -40,10 +40,13 @@ repository. It uses only the Node standard library plus the kit's SDK shim
 
 | Metric | Value |
 | --- | --- |
-| Net PnL (dev, 1,440 bars) | +$29.50 |
-| Trades | 1 |
-| Max drawdown | 1.98% |
-| Deterministic (2 runs, same `result_sha256`) | yes |
+| Net PnL (dev, 1,440 bars) | +29.501082 USDC |
+| Trades | 1 (win rate 1.0, 0 rejected orders) |
+| Max drawdown | 1.9778% |
+| Fees paid | 0.811966 USDC (net PnL at 2x fees: +28.678622 USDC) |
+| Exposure | 93.96% of the window |
+| Deterministic (2 runs, same `result_sha256`) | yes — `ae5c3d9549e366d2f167e93377feb2f5cf5bf14064aefe732eece0e228ccef26` |
+| Guardrails | met (≥1 trade, drawdown ≤ 25%) |
 
 The same logic was checked on 12-hour halves of the dev window: it trades in
 every segment (a breakout in each half) rather than depending on a single
